@@ -41,3 +41,8 @@ header button:hover{
 .logo img{
     width: 50px;
 }
+
+#display{
+    color: white;
+    padding: 50px;
+}
