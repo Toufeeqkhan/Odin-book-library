@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="dialogStyle.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+   <header>
+    <button>Add</button>
+   </header>
+
+
+
+    <div class="dialog-container">
+        <dialog class="card">
+            <h1 class="add-heading">Enter a new Book</h1>
+            <form action="">
+
+                <div class="inputs">
+                    <div class="row-set">
+                        <label for="name">Name</label>
+                        <input autocomplete="off" type="text" name="name" id="name" placeholder="To the Lighthouse">
+                    </div>
+                    <div class="row-set">
+                        <label for="author">Author</label>
+                        <input autocomplete="off" type="text" name="author" id="author" placeholder="Virginia Woolf">
+                    </div>
+                    <div class="row-set">
+                        <label for="pages">Pages</label>
+                        <input autocomplete="off" min="0" type="number" name="pages" id="pages" placeholder="345">
+                    </div>
+                </div>
+
+                <fieldset>
+                    <legend>Status</legend>
+                    <div class="radios">
+                        <input type="radio" name="status" id="finished">
+                        <label for="finished">Finished</label>
+                    </div>
+                    <div class="radios">
+                        <input type="radio" name="status" id="in-progress" checked>
+                        <label for="in-progress">In Progress</label>
+                    </div>
+                    <div class="radios">
+                        <input type="radio" name="status" id="in-future">
+                        <label for="in-future">In Future</label>
+                    </div>
+                </fieldset>
+                <button>Add</button>
+            </form>
+        </dialog>
+    </div>
+</body>
+
+</html>
