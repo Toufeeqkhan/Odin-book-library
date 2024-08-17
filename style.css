@@ -1,0 +1,43 @@
+
+:root{
+    --box-shadow: 1px 3px 4px hsla(0, 0%, 0%, 0.548);
+    --back-color: white;
+    --transition: 0.2s all linear;
+    --body-color: #1b1b1e;
+}
+
+
+header {
+    background-color: var(--back-color);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+
+header button{
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    color: var(--back-color);
+    background-color: var(--body-color);
+    border: none;
+    font-weight: bold;
+    box-shadow: var(--box-shadow);
+    transition: 0.2s all linear;
+    box-sizing: border-box;
+}
+header button:hover{
+    background-color: transparent;
+    border: 2px solid var(--body-color);
+    color:var(--body-color);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 50px;
+}
