@@ -1,22 +1,31 @@
-
-:root{
+:root {
     --box-shadow: 1px 3px 4px hsla(0, 0%, 0%, 0.548);
-    --back-color: white;
-    --transition: 0.2s all linear;
-    --body-color: #1b1b1e;
+    --body-color: white;
+    --transition: 0.1s all linear;
+    /* --back-color: #1b1b1e; */
+    --back-color: #2f2730;
+    --title-font: "Josefin Slab", serif;
 }
 
+body {
+    background-color: var(--baby-color);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 10fr;
+}
 
 header {
+    grid-column: span 2;
     background-color: var(--back-color);
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100px;
+    box-shadow: var(--box-shadow);
 }
 
-header button{
+header button {
     padding: 1rem 2rem;
     border-radius: 5rem;
     color: var(--back-color);
@@ -26,23 +35,106 @@ header button{
     box-shadow: var(--box-shadow);
     transition: 0.2s all linear;
     box-sizing: border-box;
+    cursor: pointer;
 }
-header button:hover{
+
+header button:hover {
     background-color: transparent;
     border: 2px solid var(--body-color);
-    color:var(--body-color);
+    color: var(--body-color);
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
+    color: var(--body-color);
 }
 
-.logo img{
+.logo img {
     width: 50px;
 }
 
-#display{
-    color: white;
+#display {
+    color: black;
     padding: 50px;
+}
+
+.book {
+    box-shadow: var(--box-shadow);
+    background-color: var(--back-color);
+    margin: 10px;
+    padding: 1rem;
+    color: var(--body-color);
+    display: inline-block;
+    width: 200px;
+    height: 250px;
+    border-radius: 1rem;
+    color: var(--body-color);
+    transition: var(--transition);
+}
+.book:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.book-name {
+    background-color: var(--body-color);
+    color: var(--back-color);
+    padding: 10px;
+    position: relative;
+    right: 1rem;
+    margin-top: 1rem;
+    border-radius: 0rem 6rem 6rem 0rem;
+    border: 1px dashed;
+    font-family: var(--title-font);
+    font-size: 1.2rem;
+    background-color: #ffffff
+}
+
+.book-author{
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: "Italianno", sans-serif;
+    font-weight: 400;
+}
+
+.book-page,
+.book-status{
+    font-size: 12px;
+    display: inline;
+    position: relative;
+    top: 50%;
+}
+
+.book-status{
+    margin-left: 20%;
+    text-align: center;
+}
+
+.books-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.sidebar{
+    border-top: 1px solid white;
+    background-color: var(--back-color);
+    grid-column: 1;
+    grid-row:2/-1;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+}
+
+main{
+    grid-row-end: -1;
+}
+
+.sidebar h1{
+    color: var(--body-color);
+    font-weight: 200;
+    font-size: 24px;
+    padding: 1rem;
 }

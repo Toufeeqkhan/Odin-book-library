@@ -7,6 +7,8 @@
     <title>Book Library</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
     </style>
     <link rel="stylesheet" href="dialogStyle.css">
     <link rel="stylesheet" href="style.css">
@@ -32,15 +34,15 @@
                 <div class="inputs">
                     <div class="row-set">
                         <label for="name">Name</label>
-                        <input autocomplete="off" type="text" name="name" id="name" placeholder="To the Lighthouse">
+                        <input required autocomplete="off" type="text" name="name" id="name" placeholder="To the Lighthouse">
                     </div>
                     <div class="row-set">
                         <label for="author">Author</label>
-                        <input autocomplete="off" type="text" name="author" id="author" placeholder="Virginia Woolf">
+                        <input  required autocomplete="off" type="text" name="author" id="author" placeholder="Virginia Woolf">
                     </div>
                     <div class="row-set">
                         <label for="pages">Pages</label>
-                        <input autocomplete="off" min="0" type="number" name="pages" id="pages" placeholder="345">
+                        <input required autocomplete="off" min="0" type="number" name="pages" id="pages" placeholder="345">
                     </div>
                 </div>
 
@@ -63,9 +65,15 @@
             </form>
         </dialog>
     </div>
-
+<div class="sidebar">
+    <h1 id="book-count">Books: 0</h1>
+    <h1 id="progress-count">In Progress: 0</h1>
+    <h1 id="read-count">Finished: 0</h1>
+    <h1 id="future-count">In Future: 0</h1>
+</div>
     <main>
-        <h1 id="display">Display</h1>
+        <div class="books-container" id="books-container">
+        </div>
     </main>
     <script src="script.js"></script>
 </body>
