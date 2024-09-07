@@ -10,7 +10,7 @@
 body {
     background-color: var(--baby-color);
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 10fr;
 }
 
@@ -71,6 +71,10 @@ header button:hover {
     border-radius: 1rem;
     color: var(--body-color);
     transition: var(--transition);
+    border: 1px double;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .book:hover{
     transform: scale(1.01);
@@ -81,35 +85,23 @@ header button:hover {
     background-color: var(--body-color);
     color: var(--back-color);
     padding: 10px;
-    position: relative;
-    right: 1rem;
-    margin-top: 1rem;
-    border-radius: 0rem 6rem 6rem 0rem;
-    border: 1px dashed;
-    font-family: var(--title-font);
-    font-size: 1.2rem;
-    background-color: #ffffff
+    margin-top:0.51rem;
+    line-height: 1.4;
+    border-radius: 0.5rem;
 }
 
 .book-author{
-    font-size: 22px;
+    font-size: 0.8rem;
     margin-top: 10px;
-    margin-left: 10px;
-    font-family: "Italianno", sans-serif;
+    text-align: end;
     font-weight: 400;
 }
 
-.book-page,
-.book-status{
-    font-size: 12px;
-    display: inline;
-    position: relative;
-    top: 50%;
-}
-
-.book-status{
-    margin-left: 20%;
-    text-align: center;
+.book-bottom{
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    
 }
 
 .books-container{
@@ -122,10 +114,10 @@ header button:hover {
 .sidebar{
     border-top: 1px solid white;
     background-color: var(--back-color);
-    grid-column: 1;
+    grid-column:1;
     grid-row:2/-1;
     box-shadow: var(--box-shadow);
-    padding: 2rem;
+    padding: 1rem;
 }
 
 main{
@@ -135,6 +127,6 @@ main{
 .sidebar h1{
     color: var(--body-color);
     font-weight: 200;
-    font-size: 24px;
+    font-size: 1.4rem;
     padding: 1rem;
 }

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Book Library</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -64,18 +64,19 @@
                 <button>Add</button>
             </form>
         </dialog>
-    </div>
+   </div>
 <div class="sidebar">
-    <h1 id="book-count">Books: 0</h1>
-    <h1 id="progress-count">In Progress: 0</h1>
-    <h1 id="read-count">Finished: 0</h1>
-    <h1 id="future-count">In Future: 0</h1>
+    <h1 >Books: <span id="book-count">0</span></h1>
+    <h1 >In Progress: <span id="progress-count">0</span></h1>
+    <h1>Finished: <span  id="read-count">0</span></h1>
+    <h1 >In Future: <span id="future-count">0</span></h1>
 </div>
     <main>
         <div class="books-container" id="books-container">
         </div>
     </main>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="classBassed.js"></script>
 </body>
 
 </html>
